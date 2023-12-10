@@ -5,32 +5,20 @@
 <main>
     <h1>New Plant</h1>
 
-    <form method='POST'>
-        <fieldset>
-            <legend>Please fill out your plant's info:</legend>
+    <form method="post" action="{{ url_for('create') }}">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
 
-            <label>
-                Plant's name:
-                <input type="text" name="plant_name">
-            </label>
-            
-            <label>
-                Plant's variety:
-                <input type="text" name="variety">
-            </label>
+        <label for="variety">Variety:</label>
+        <input type="text" id="variety" name="variety" required>
 
-            <label>
-                Plant's photo URL:
-                <input type="url" name="photo">
-            </label>
+        <label for="photo_url">Photo URL:</label>
+        <input type="text" id="photo_url" name="photo_url" required>
 
-            <label>
-                Date planted:
-                <input type="date" name="date_planted">
-            </label>
+        <label for="date_planted">Date Planted:</label>
+        <input type="text" id="date_planted" name="date_planted" required>
 
-            <input type="submit" class="submit" value="Submit!">
-        </fieldset>
+        <button type="submit">Create Plant</button>
     </form>
 </main>
 
